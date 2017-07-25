@@ -31,7 +31,7 @@ def test_division():
     """
 
     """
-    assert fcm.math.division(5, 2) == 2.5
+    assert fcm.math.division(5.0, 2.0) == 2.5
     assert fcm.math.division(2, 1) == 2
 
 def test_exp():

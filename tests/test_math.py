@@ -11,13 +11,21 @@ def test_add():
     """
     assert fcm.math.add (5, 2) == 7
     assert fcm.math.add (2, 5) == 7
+testdata = [
+    (2, 5, 10),
+    (1, 2, 2),
+    (11, 9, 99),
+    (11, 0, 0),
+    (0, 0, 0)
+]
 
-def test_mult():
+@pytest.mark.parametrize("a,b,expected", testdata)
+def test_mult(a, b, expected):
     """
 
     """
-    assert fcm.math.mult(3, 3) == 9
-    assert fcm.math.mult(-3, -2) == 6
+    assert fcm.math.mult(a, b) == expected
+    assert fcm.math.mult(b, a) == expected
 
 def test_division():
     """
